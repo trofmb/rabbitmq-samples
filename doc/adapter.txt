@@ -1,0 +1,185 @@
+﻿Libjsoncpp-dev
+liblog4cplus-dev
+libboost-system-dev
+libtinyxml2-dev
+librabbitmq-dev
+
+libxmlrpc-c++8-dev
+libboost-program-options-dev   libboost-filesystem-dev
+
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(Tinyxml2 REQUIRED)
+
+PkgConfig  
+
+Tinyxml2 Libjsoncpp
+
+------------------------------------------------------------------------------------------------------------------------------------
+python3
+
+apt  install python3-pip
+
+
+
+pip3 install flask
+
+                                flask
+
+Collecting flask
+  Downloading https://files.pythonhosted.org/packages/9b/93/628509b8d5dc749656a9641f4caf13540e2cdec85276964ff8f43bbb1d3b/Flask-1.1.1-py2.py3-none-any.whl (94kB)
+    100% |████████████████████████████████| 102kB 2.0MB/s 
+Collecting itsdangerous>=0.24 (from flask)
+  Downloading https://files.pythonhosted.org/packages/76/ae/44b03b253d6fade317f32c24d100b3b35c2239807046a4c953c7b89fa49e/itsdangerous-1.1.0-py2.py3-none-any.whl
+Collecting Werkzeug>=0.15 (from flask)
+  Downloading https://files.pythonhosted.org/packages/ce/42/3aeda98f96e85fd26180534d36570e4d18108d62ae36f87694b476b83d6f/Werkzeug-0.16.0-py2.py3-none-any.whl (327kB)
+    100% |████████████████████████████████| 327kB 2.2MB/s 
+Collecting Jinja2>=2.10.1 (from flask)
+  Downloading https://files.pythonhosted.org/packages/65/e0/eb35e762802015cab1ccee04e8a277b03f1d8e53da3ec3106882ec42558b/Jinja2-2.10.3-py2.py3-none-any.whl (125kB)
+    100% |████████████████████████████████| 133kB 5.6MB/s 
+Collecting click>=5.1 (from flask)
+  Downloading https://files.pythonhosted.org/packages/fa/37/45185cb5abbc30d7257104c434fe0b07e5a195a6847506c074527aa599ec/Click-7.0-py2.py3-none-any.whl (81kB)
+    100% |████████████████████████████████| 81kB 5.7MB/s 
+Collecting MarkupSafe>=0.23 (from Jinja2>=2.10.1->flask)
+  Downloading https://files.pythonhosted.org/packages/6e/57/d40124076756c19ff2269678de7ae25a14ebbb3f6314eb5ce9477f191350/MarkupSafe-1.1.1-cp35-cp35m-manylinux1_x86_64.whl
+Installing collected packages: itsdangerous, Werkzeug, MarkupSafe, Jinja2, click, flask
+Successfully installed Jinja2-2.10.3 MarkupSafe-1.1.1 Werkzeug-0.16.0 click-7.0 flask-1.1.1 itsdangerous-1.1.0
+
+
+
+
+
+
+whatis pip3
+pip3 (1)             - A tool for installing and managing Python packages
+
+
+wheel-колеса
+lick-7.0-py2.py3-none-any.whl
+itsdangerous-1.1.0-py2.py3-none-any.whl
+MarkupSafe-1.1.1-cp35-cp35m-manylinux1_x86_64.whl
+Flask-1.1.1-py2.py3-none-any.whl  *****внутри содержит so
+Jinja2-2.10.3-py2.py3-none-any.whl
+Werkzeug-0.16.0-py2.py3-none-any.whl
+
+
+
+
+
+
+
+
+
+
+
+            amqp  клиент :
+pika
+py-amqlib  не поддерживает многопоточность, простая клиентска библиотека  ---плохо
+
+aio-pika 
+celery
+aiomqp
+
+# сборка 
+ python3  setup.py bdist_wheel 
+ 
+ 
+ 
+ #список очередей
+ sudo rabbitmqctl list_queues
+
+sudo rabbitmqctl list_bindings
+
+
+
+
+#####поискать тэги
+git tag -l 'v3.6*'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+udo  service rabbitmq-server  status
+● rabbitmq-server.service - RabbitMQ Messaging Server
+   Loaded: loaded (/lib/systemd/system/rabbitmq-server.service; enabled; vendor preset: enabled)
+   Active: active (running) since Thu 2020-01-23 15:21:37 MSK; 59s ago
+ Main PID: 24220 (rabbitmq-server)
+   CGroup: /system.slice/rabbitmq-server.service
+           ├─24220 /bin/sh /usr/sbin/rabbitmq-server
+           ├─24229 /bin/sh -e /usr/lib/rabbitmq/bin/rabbitmq-server
+           ├─24388 /usr/lib/erlang/erts-8.2.1/bin/epmd -daemon
+           ├─24460 /usr/lib/erlang/erts-8.2.1/bin/beam -W w -A 64 -P 1048576 -t 5000000 -stbt db -zdbbl 32000 -K true -B i -- -root /usr/lib/erlang -progname erl --
+           ├─24549 erl_child_setup 65536
+           ├─24579 inet_gethost 4
+           └─24580 inet_gethost 4
+
+янв 23 15:21:33 astra1-6-2 systemd[1]: Starting RabbitMQ Messaging Server...
+янв 23 15:21:35 astra1-6-2 rabbitmq[24221]: Waiting for 'rabbit@astra1-6-2' ...
+янв 23 15:21:35 astra1-6-2 rabbitmq[24221]: pid is 24229 ...
+янв 23 15:21:37 astra1-6-2 systemd[1]: Started RabbitMQ Messaging Server.
+lines 1-17/17 (END)
+
+
+
+
+Running setup.py develop for aiohttp
+Successfully installed Click-7.0 Jinja2-2.11.0 MarkupSafe-1.1.1 Pillow-7.0.0 aiodns-2.0.0 aiohttp aiohttp-theme-0.1.5 alabaster-0.7.12 asn1crypto-1.3.0 async-generator-1.10 async-timeout-3.0.1 atomicwrites-1.3.0 attrs-19.3.0 babel-2.8.0 bleach-3.1.0 blockdiag-2.0.0 brotlipy-0.7.0 cchardet-2.1.4 certifi-2019.11.28 cffi-1.13.2 chardet-3.0.4 codecov-2.0.15 coverage-4.5.4 cryptography-2.7 docutils-0.16 entrypoints-0.3 filelock-3.0.12 flake8-3.7.8 freezegun-0.3.12 funcparserlib-0.3.6 gunicorn-19.9.0 idna-2.8 idna-ssl-1.1.0 imagesize-1.2.0 importlib-metadata-1.5.0 incremental-17.5.0 isort-4.3.21 mccabe-0.6.1 more-itertools-8.2.0 multidict-4.5.2 mypy-0.720 mypy-extensions-0.4.2 packaging-20.1 pathlib2-2.3.5 pkginfo-1.5.0.1 pluggy-0.13.1 py-1.8.1 pycares-3.1.1 pycodestyle-2.5.0 pycparser-2.19 pyflakes-2.1.1 pygments-2.4.2 pyparsing-2.4.6 pytest-5.2.1 pytest-cov-2.8.1 pytest-mock-1.11.1 python-dateutil-2.8.1 pytz-2019.3 readme-renderer-24.0 requests-2.22.0 requests-toolbelt-0.9.1 setuptools-45.1.0 setuptools-git-1.2 six-1.14.0 snowballstemmer-2.0.0 sphinx-2.2.0 sphinxcontrib-applehelp-1.0.1 sphinxcontrib-asyncio-0.2.0 sphinxcontrib-blockdiag-1.5.5 sphinxcontrib-devhelp-1.0.1 sphinxcontrib-htmlhelp-1.0.2 sphinxcontrib-jsmath-1.0.1 sphinxcontrib-qthelp-1.0.2 sphinxcontrib-serializinghtml-1.1.3 toml-0.10.0 towncrier-19.2.0 tox-3.13.2 tqdm-4.42.0 trustme-0.5.2 twine-1.15.0 typed-ast-1.4.1 typing-3.7.4.1 typing-extensions-3.7.4 urllib3-1.25.8 uvloop-0.12.1 virtualenv-16.7.9 wcwidth-0.1.8 webcolors-1.10 webencodings-0.5.1 yarl-1.3.0 zipp-1.1.0
+flake8 aiohttp examples tests
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
